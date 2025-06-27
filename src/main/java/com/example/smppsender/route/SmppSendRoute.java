@@ -17,11 +17,10 @@ import java.time.LocalDateTime;
 public class SmppSendRoute extends RouteBuilder {
 
     private static final Logger logger = LoggerFactory.getLogger(SmppSendRoute.class);
-
     private final MessageRepository messageRepository;
 
     @Value("${smpp.sender}")
-    private String defaultSender;
+    private String defaultSender; // Пример: BK.bel
 
     public SmppSendRoute(MessageRepository messageRepository) {
         this.messageRepository = messageRepository;
@@ -30,33 +29,47 @@ public class SmppSendRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        // Логируем исключения, если они будут
+        // Обработка исключений — сохраняем ошибку в БД, меняем статус
         onException(Exception.class)
-                .log(LoggingLevel.ERROR, logger, "Ошибка при отправке SMPP сообщения: ${exception.message}")
+                .process(exchange -> {
+                    Throwable exception = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Throwable.class);
+                    Message message = exchange.getIn().getBody(Message.class);
+                    if (message != null) {
+                        message.setStatus("FAILED");
+                        message.setErrorMessage(exception.getMessage());
+                        messageRepository.save(message);
+                    }
+                    logger.error("Ошибка при отправке SMPP сообщения: {}", exception.getMessage(), exception);
+                })
                 .handled(true);
 
         from("direct:sendSmppMessage")
                 .process(exchange -> {
                     Message message = exchange.getIn().getBody(Message.class);
                     message.setCreatedAt(LocalDateTime.now());
-                    messageRepository.save(message);
-                    logger.info("Подготовлено сообщение к отправке: id={}, to={}, sender={}, content='{}'",
-                            message.getId(), message.getDestinationNumber(), message.getSenderId(), message.getContent());
 
-                    // Гарантируем, что senderId всегда установлен
+                    // Если senderId не задан, ставим дефолтный
                     if (message.getSenderId() == null || message.getSenderId().isBlank()) {
-                        message.setSenderId(defaultSender); // defaultSender = "BK.bel"
+                        message.setSenderId(defaultSender);
                     }
 
-                    // Ограничим длину отправителя для соответствия SMPP
+                    // Проверка длины senderId для SMPP (до 20 символов)
                     if (message.getSenderId().length() > 20) {
                         throw new IllegalArgumentException("senderId превышает 20 символов: " + message.getSenderId());
                     }
+
+                    // Сохраняем сообщение (статус и ошибка пока не меняем)
+                    messageRepository.save(message);
+
+                    // Устанавливаем заголовки SMPP и тело
+                    exchange.getIn().setHeader(SmppConstants.SOURCE_ADDR, message.getSenderId());
+                    exchange.getIn().setHeader(SmppConstants.DEST_ADDR, message.getDestinationNumber());
+                    exchange.getIn().setHeader(SmppConstants.DATA_CODING, (byte) 0x08); // UCS-2
+                    exchange.getIn().setBody(message.getContent());
+
+                    logger.info("Подготовлено сообщение к отправке: id={}, to={}, sender={}, content='{}'",
+                            message.getId(), message.getDestinationNumber(), message.getSenderId(), message.getContent());
                 })
-                .setHeader(SmppConstants.DATA_CODING, constant((byte) 0x08)) // UCS-2
-                .setHeader(SmppConstants.SOURCE_ADDR, simple("${body.senderId}"))
-                .setHeader(SmppConstants.DEST_ADDR, simple("${body.destinationNumber}"))
-                .setBody(simple("${body.content}"))
                 .to("smpp://{{camel.component.smpp.systemId}}@{{camel.component.smpp.host}}:{{camel.component.smpp.port}}"
                         + "?password={{camel.component.smpp.password}}"
                         + "&enquireLinkTimer={{camel.component.smpp.enquireLinkTimer}}"
@@ -65,13 +78,17 @@ public class SmppSendRoute extends RouteBuilder {
                 .process(exchange -> {
                     String smppMessageId = exchange.getIn().getHeader(SmppConstants.ID, String.class);
                     Message message = exchange.getIn().getBody(Message.class);
+
                     if (smppMessageId != null) {
                         message.setSmppMessageId(smppMessageId);
-                        messageRepository.save(message);
-                        logger.info("Сообщение отправлено успешно: id={}, smppMessageId={}", message.getId(), smppMessageId);
-                    } else {
-                        logger.warn("SMPP сообщение отправлено, но smppMessageId не получен: id={}", message.getId());
                     }
+                    // Помечаем как отправленное и очищаем ошибку
+                    message.setStatus("SENT");
+                    message.setErrorMessage(null);
+
+                    messageRepository.save(message);
+
+                    logger.info("Сообщение отправлено успешно: id={}, smppMessageId={}", message.getId(), smppMessageId);
                 });
     }
 }

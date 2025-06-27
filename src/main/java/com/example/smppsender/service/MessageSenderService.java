@@ -2,7 +2,6 @@ package com.example.smppsender.service;
 
 import com.example.smppsender.model.Message;
 import org.apache.camel.ProducerTemplate;
-import org.apache.camel.component.smpp.SmppConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -44,7 +43,7 @@ public class MessageSenderService {
 
                 producerTemplate.send("direct:sendSmppMessage", exchange -> {
                     exchange.getIn().setBody(message);
-                    exchange.getIn().setHeader(SmppConstants.SOURCE_ADDR, defaultSender);
+                    // Убираем установку SmppConstants.SOURCE_ADDR здесь, т.к. это делает маршрут
                 });
             });
         }
@@ -64,7 +63,7 @@ public class MessageSenderService {
 
                 producerTemplate.send("direct:sendSmppMessage", exchange -> {
                     exchange.getIn().setBody(message);
-                    exchange.getIn().setHeader(SmppConstants.SOURCE_ADDR, defaultSender);
+                    // Убираем установку SmppConstants.SOURCE_ADDR здесь
                 });
             });
         }

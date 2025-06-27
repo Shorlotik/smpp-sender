@@ -30,5 +30,12 @@ public class Message {
     @Column(name = "smpp_message_id", unique = true)
     private String smppMessageId;
 
+    @Column(length = 20)
     private String senderId;
+
+    @Column(length = 255)
+    private String errorMessage; // текст ошибки при отправке
+
+    @Column(length = 20)
+    private String status; // например, "SENT" или "FAILED"
 }
