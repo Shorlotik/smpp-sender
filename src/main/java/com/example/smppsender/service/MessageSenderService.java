@@ -28,7 +28,18 @@ public class MessageSenderService {
         this.producerTemplate = producerTemplate;
     }
 
+    // Проверка формата номера для Беларуси (формат 375XXYYYYYYY)
+    private boolean isValidBelarusNumber(String number) {
+        // Операторы Беларуси: 25,29,33,44,17 и 7 цифр после кода
+        return number != null && number.matches("^375(25|29|33|44|17)\\d{7}$");
+    }
+
     public void sendBulkMessages(String destinationNumber, String content, int totalMessages) {
+        if (!isValidBelarusNumber(destinationNumber)) {
+            logger.warn("Отмена отправки: номер не валиден для Беларуси: {}", destinationNumber);
+            return;
+        }
+
         for (int i = 0; i < totalMessages; i++) {
             final int index = i;
             executor.submit(() -> {
@@ -43,7 +54,6 @@ public class MessageSenderService {
 
                 producerTemplate.send("direct:sendSmppMessage", exchange -> {
                     exchange.getIn().setBody(message);
-                    // Убираем установку SmppConstants.SOURCE_ADDR здесь, т.к. это делает маршрут
                 });
             });
         }
@@ -51,6 +61,11 @@ public class MessageSenderService {
 
     public void sendMessageToMany(String text, List<String> numbers) {
         for (String number : numbers) {
+            if (!isValidBelarusNumber(number)) {
+                logger.warn("Пропущен номер невалидного формата: {}", number);
+                continue;
+            }
+
             executor.submit(() -> {
                 Message message = Message.builder()
                         .content(text)
@@ -63,7 +78,6 @@ public class MessageSenderService {
 
                 producerTemplate.send("direct:sendSmppMessage", exchange -> {
                     exchange.getIn().setBody(message);
-                    // Убираем установку SmppConstants.SOURCE_ADDR здесь
                 });
             });
         }

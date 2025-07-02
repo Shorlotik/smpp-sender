@@ -37,5 +37,5 @@ public class Message {
     private String errorMessage; // текст ошибки при отправке
 
     @Column(length = 20)
-    private String status; // например, "SENT" или "FAILED"
+    private String status;
 }

@@ -20,7 +20,7 @@ public class SmppSendRoute extends RouteBuilder {
     private final MessageRepository messageRepository;
 
     @Value("${smpp.sender}")
-    private String defaultSender; // Пример: BK.bel
+    private String defaultSender;// BK.bel
 
     public SmppSendRoute(MessageRepository messageRepository) {
         this.messageRepository = messageRepository;
@@ -28,12 +28,11 @@ public class SmppSendRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-
         // Обработка исключений — сохраняем ошибку в БД, меняем статус
         onException(Exception.class)
                 .process(exchange -> {
                     Throwable exception = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Throwable.class);
-                    Message message = exchange.getIn().getBody(Message.class);
+                    Message message = exchange.getProperty("originalMessage", Message.class);
                     if (message != null) {
                         message.setStatus("FAILED");
                         message.setErrorMessage(exception.getMessage());
@@ -61,6 +60,9 @@ public class SmppSendRoute extends RouteBuilder {
                     // Сохраняем сообщение (статус и ошибка пока не меняем)
                     messageRepository.save(message);
 
+                    // Store original message in exchange properties for error handling
+                    exchange.setProperty("originalMessage", message);
+
                     // Устанавливаем заголовки SMPP и тело
                     exchange.getIn().setHeader(SmppConstants.SOURCE_ADDR, message.getSenderId());
                     exchange.getIn().setHeader(SmppConstants.DEST_ADDR, message.getDestinationNumber());
@@ -77,7 +79,8 @@ public class SmppSendRoute extends RouteBuilder {
                         + "&systemType={{camel.component.smpp.systemType}}")
                 .process(exchange -> {
                     String smppMessageId = exchange.getIn().getHeader(SmppConstants.ID, String.class);
-                    Message message = exchange.getIn().getBody(Message.class);
+                    // Get the original message from exchange properties
+                    Message message = exchange.getProperty("originalMessage", Message.class);
 
                     if (smppMessageId != null) {
                         message.setSmppMessageId(smppMessageId);

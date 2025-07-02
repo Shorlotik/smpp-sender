@@ -1,15 +1,20 @@
-2025-06-27T09:32:45.692+03:00  INFO 77974 --- [main] c.e.s.SmppSenderApplicationTests         : Starting SmppSenderApplicationTests using Java 23.0.2 with PID 77974 (started by user in /Users/user/IdeaProjects/smpp-sender)
-2025-06-27T09:32:45.693+03:00  INFO 77974 --- [main] c.e.s.SmppSenderApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2025-06-27T09:32:46.378+03:00  INFO 77974 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-27T09:32:46.428+03:00  INFO 77974 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
-2025-06-27T09:32:46.857+03:00  INFO 77974 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-27T09:32:46.893+03:00  INFO 77974 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-06-27T09:32:46.919+03:00  INFO 77974 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-27T09:32:47.144+03:00  INFO 77974 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-27T09:32:47.168+03:00  INFO 77974 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-27T09:32:47.269+03:00  INFO 77974 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2fcc5f49
-2025-06-27T09:32:47.270+03:00  INFO 77974 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-27T09:32:47.319+03:00  INFO 77974 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-07-02T11:05:41.681+03:00  INFO 37574 --- [main] com.example.smppsender.Application       : Starting Application using Java 17.0.15 with PID 37574 (/Users/user/IdeaProjects/smpp-sender/target/classes started by user in /Users/user/IdeaProjects/smpp-sender)
+2025-07-02T11:05:41.684+03:00  INFO 37574 --- [main] com.example.smppsender.Application       : No active profile set, falling back to 1 default profile: "default"
+2025-07-02T11:05:42.368+03:00  INFO 37574 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-02T11:05:42.422+03:00  INFO 37574 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2025-07-02T11:05:42.903+03:00  INFO 37574 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-02T11:05:42.915+03:00  INFO 37574 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-02T11:05:42.915+03:00  INFO 37574 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02T11:05:42.954+03:00  INFO 37574 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-02T11:05:42.955+03:00  INFO 37574 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1240 ms
+2025-07-02T11:05:43.110+03:00  INFO 37574 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-02T11:05:43.170+03:00  INFO 37574 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-02T11:05:43.198+03:00  INFO 37574 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-02T11:05:43.447+03:00  INFO 37574 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-02T11:05:43.478+03:00  INFO 37574 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-02T11:05:43.559+03:00  INFO 37574 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6d31f14
+2025-07-02T11:05:43.560+03:00  INFO 37574 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-02T11:05:43.637+03:00  INFO 37574 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 14.18
@@ -17,182 +22,170 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-06-27T09:32:47.882+03:00  INFO 77974 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-27T09:32:47.992+03:00  INFO 77974 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-27T09:32:48.518+03:00  WARN 77974 --- [main] o.a.c.component.smpp.SmppConfiguration   : Unsupported encoding "UCS2" is being set.
-2025-06-27T09:32:48.610+03:00  WARN 77974 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-27T09:32:49.230+03:00  INFO 77974 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) is starting
-2025-06-27T09:32:49.237+03:00 DEBUG 77974 --- [main] o.a.camel.component.smpp.SmppProducer    : Connecting to: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T09:32:49.392+03:00  INFO 77974 --- [main] org.jsmpp.session.SMPPSession            : Connected from port 52186 to jasmin.gemtoo.dev/91.218.20.140:2775
-2025-06-27T09:32:49.394+03:00  INFO 77974 --- [PDUReaderWorker-ea2bb6be] org.jsmpp.session.SMPPSession            : Starting PDUReaderWorker
-2025-06-27T09:32:49.461+03:00  INFO 77974 --- [main] o.a.camel.component.smpp.SmppProducer    : Connected to: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T09:32:49.462+03:00 DEBUG 77974 --- [main] o.a.camel.component.smpp.SmppConsumer    : Connecting to: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T09:32:49.520+03:00  INFO 77974 --- [main] org.jsmpp.session.SMPPSession            : Connected from port 52187 to jasmin.gemtoo.dev/91.218.20.140:2775
-2025-06-27T09:32:49.521+03:00  INFO 77974 --- [PDUReaderWorker-2c79ef45] org.jsmpp.session.SMPPSession            : Starting PDUReaderWorker
-2025-06-27T09:32:49.580+03:00  INFO 77974 --- [main] o.a.camel.component.smpp.SmppConsumer    : Connected to: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T09:32:49.582+03:00  INFO 77974 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (total:2)
-2025-06-27T09:32:49.582+03:00  INFO 77974 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started smpp-dlr-route (smpp://test@jasmin.gemtoo.dev:2775)
-2025-06-27T09:32:49.582+03:00  INFO 77974 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started route1 (direct://sendSmppMessage)
-2025-06-27T09:32:49.582+03:00  INFO 77974 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) started in 351ms (build:0ms init:0ms start:351ms boot:1s212ms)
-2025-06-27T09:32:49.585+03:00  INFO 77974 --- [main] c.e.s.SmppSenderApplicationTests         : Started SmppSenderApplicationTests in 4.167 seconds (process running for 5.009)
-2025-06-27T09:32:50.023+03:00  INFO 77974 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) is shutting down (timeout:45s)
-2025-06-27T09:32:50.028+03:00 DEBUG 77974 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppConsumer    : Disconnecting from: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T09:32:50.096+03:00  INFO 77974 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppConsumer    : Disconnected from: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T09:32:50.096+03:00  INFO 77974 --- [PDUReaderWorker-2c79ef45] org.jsmpp.session.SMPPSession            : Reading PDU session 2c79ef45 in state CLOSED: Socket closed
-2025-06-27T09:32:50.097+03:00 DEBUG 77974 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppProducer    : Disconnecting from: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T09:32:50.155+03:00  INFO 77974 --- [PDUReaderWorker-ea2bb6be] org.jsmpp.session.SMPPSession            : Reading PDU session ea2bb6be in state BOUND_TX: Socket closed
-2025-06-27T09:32:50.155+03:00  INFO 77974 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppProducer    : Disconnected from: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T09:32:50.157+03:00  INFO 77974 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (total:2)
-2025-06-27T09:32:50.157+03:00  INFO 77974 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped route1 (direct://sendSmppMessage)
-2025-06-27T09:32:50.157+03:00  INFO 77974 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped smpp-dlr-route (smpp://test@jasmin.gemtoo.dev:2775)
-2025-06-27T09:32:50.160+03:00  INFO 77974 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) shutdown in 137ms (uptime:0s)
-2025-06-27T09:32:50.164+03:00  INFO 77974 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-27T09:32:50.166+03:00  INFO 77974 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-27T09:32:50.168+03:00  INFO 77974 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-27T09:33:17.012+03:00  INFO 78013 --- [main] c.e.s.SmppSenderApplicationTests         : Starting SmppSenderApplicationTests using Java 23.0.2 with PID 78013 (started by user in /Users/user/IdeaProjects/smpp-sender)
-2025-06-27T09:33:17.013+03:00  INFO 78013 --- [main] c.e.s.SmppSenderApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2025-06-27T09:33:17.701+03:00  INFO 78013 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-27T09:33:17.750+03:00  INFO 78013 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
-2025-06-27T09:33:18.182+03:00  INFO 78013 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-27T09:33:18.223+03:00  INFO 78013 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-06-27T09:33:18.250+03:00  INFO 78013 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-27T09:33:18.489+03:00  INFO 78013 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-27T09:33:18.515+03:00  INFO 78013 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-27T09:33:18.606+03:00  INFO 78013 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11295cb1
-2025-06-27T09:33:18.607+03:00  INFO 78013 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-27T09:33:18.656+03:00  INFO 78013 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 14.18
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-06-27T09:33:19.222+03:00  INFO 78013 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-27T09:33:19.333+03:00  INFO 78013 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-27T09:33:19.850+03:00  WARN 78013 --- [main] o.a.c.component.smpp.SmppConfiguration   : Unsupported encoding "UCS2" is being set.
-2025-06-27T09:33:19.944+03:00  WARN 78013 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-27T09:33:20.564+03:00  INFO 78013 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) is starting
-2025-06-27T09:33:20.574+03:00 DEBUG 78013 --- [main] o.a.camel.component.smpp.SmppProducer    : Connecting to: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T09:33:20.647+03:00  INFO 78013 --- [main] org.jsmpp.session.SMPPSession            : Connected from port 52208 to jasmin.gemtoo.dev/91.218.20.140:2775
-2025-06-27T09:33:20.649+03:00  INFO 78013 --- [PDUReaderWorker-e4aca9ee] org.jsmpp.session.SMPPSession            : Starting PDUReaderWorker
-2025-06-27T09:33:20.713+03:00  INFO 78013 --- [main] o.a.camel.component.smpp.SmppProducer    : Connected to: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T09:33:20.714+03:00 DEBUG 78013 --- [main] o.a.camel.component.smpp.SmppConsumer    : Connecting to: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T09:33:20.758+03:00  INFO 78013 --- [main] org.jsmpp.session.SMPPSession            : Connected from port 52209 to jasmin.gemtoo.dev/91.218.20.140:2775
-2025-06-27T09:33:20.758+03:00  INFO 78013 --- [PDUReaderWorker-90ae066b] org.jsmpp.session.SMPPSession            : Starting PDUReaderWorker
-2025-06-27T09:33:20.803+03:00  INFO 78013 --- [main] o.a.camel.component.smpp.SmppConsumer    : Connected to: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T09:33:20.807+03:00  INFO 78013 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (total:2)
-2025-06-27T09:33:20.808+03:00  INFO 78013 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started smpp-dlr-route (smpp://test@jasmin.gemtoo.dev:2775)
-2025-06-27T09:33:20.808+03:00  INFO 78013 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started route1 (direct://sendSmppMessage)
-2025-06-27T09:33:20.808+03:00  INFO 78013 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) started in 242ms (build:0ms init:0ms start:242ms boot:1s203ms)
-2025-06-27T09:33:20.811+03:00  INFO 78013 --- [main] c.e.s.SmppSenderApplicationTests         : Started SmppSenderApplicationTests in 4.061 seconds (process running for 4.837)
-2025-06-27T09:33:21.190+03:00  INFO 78013 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) is shutting down (timeout:45s)
-2025-06-27T09:33:21.194+03:00 DEBUG 78013 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppConsumer    : Disconnecting from: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T09:33:21.248+03:00  INFO 78013 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppConsumer    : Disconnected from: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T09:33:21.249+03:00  INFO 78013 --- [PDUReaderWorker-90ae066b] org.jsmpp.session.SMPPSession            : Reading PDU session 90ae066b in state CLOSED: Socket closed
-2025-06-27T09:33:21.249+03:00 DEBUG 78013 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppProducer    : Disconnecting from: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T09:33:21.295+03:00  INFO 78013 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppProducer    : Disconnected from: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T09:33:21.295+03:00  INFO 78013 --- [PDUReaderWorker-e4aca9ee] org.jsmpp.session.SMPPSession            : Reading PDU session e4aca9ee in state BOUND_TX: Socket closed
-2025-06-27T09:33:21.298+03:00  INFO 78013 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (total:2)
-2025-06-27T09:33:21.299+03:00  INFO 78013 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped route1 (direct://sendSmppMessage)
-2025-06-27T09:33:21.299+03:00  INFO 78013 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped smpp-dlr-route (smpp://test@jasmin.gemtoo.dev:2775)
-2025-06-27T09:33:21.302+03:00  INFO 78013 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) shutdown in 111ms (uptime:0s)
-2025-06-27T09:33:21.307+03:00  INFO 78013 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-27T09:33:21.308+03:00  INFO 78013 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-27T09:33:21.311+03:00  INFO 78013 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-27T09:38:30.013+03:00  INFO 78137 --- [main] com.example.smppsender.Application       : Starting Application using Java 17.0.15 with PID 78137 (/Users/user/IdeaProjects/smpp-sender/target/classes started by user in /Users/user/IdeaProjects/smpp-sender)
-2025-06-27T09:38:30.015+03:00  INFO 78137 --- [main] com.example.smppsender.Application       : No active profile set, falling back to 1 default profile: "default"
-2025-06-27T09:38:30.490+03:00  INFO 78137 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-27T09:38:30.525+03:00  INFO 78137 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
-2025-06-27T09:38:30.843+03:00  INFO 78137 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-27T09:38:30.850+03:00  INFO 78137 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-27T09:38:30.850+03:00  INFO 78137 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-06-27T09:38:30.879+03:00  INFO 78137 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-27T09:38:30.879+03:00  INFO 78137 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 838 ms
-2025-06-27T09:38:30.983+03:00  INFO 78137 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-27T09:38:31.013+03:00  INFO 78137 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-06-27T09:38:31.032+03:00  INFO 78137 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-27T09:38:31.227+03:00  INFO 78137 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-27T09:38:31.247+03:00  INFO 78137 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-27T09:38:31.310+03:00  INFO 78137 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25216999
-2025-06-27T09:38:31.311+03:00  INFO 78137 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-27T09:38:31.358+03:00  INFO 78137 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 14.18
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-06-27T09:38:31.879+03:00  INFO 78137 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-27T09:38:31.988+03:00  INFO 78137 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-27T09:38:32.371+03:00  WARN 78137 --- [main] o.a.c.component.smpp.SmppConfiguration   : Unsupported encoding "UCS2" is being set.
-2025-06-27T09:38:32.391+03:00  WARN 78137 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-27T09:38:32.679+03:00  INFO 78137 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-06-27T09:38:32.847+03:00  INFO 78137 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) is starting
-2025-06-27T09:38:32.852+03:00 DEBUG 78137 --- [main] o.a.camel.component.smpp.SmppProducer    : Connecting to: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T09:38:32.932+03:00  INFO 78137 --- [main] org.jsmpp.session.SMPPSession            : Connected from port 52236 to jasmin.gemtoo.dev/91.218.20.140:2775
-2025-06-27T09:38:32.935+03:00  INFO 78137 --- [PDUReaderWorker-c37ce6e6] org.jsmpp.session.SMPPSession            : Starting PDUReaderWorker
-2025-06-27T09:38:33.008+03:00  INFO 78137 --- [main] o.a.camel.component.smpp.SmppProducer    : Connected to: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T09:38:33.009+03:00 DEBUG 78137 --- [main] o.a.camel.component.smpp.SmppConsumer    : Connecting to: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T09:38:33.055+03:00  INFO 78137 --- [main] org.jsmpp.session.SMPPSession            : Connected from port 52237 to jasmin.gemtoo.dev/91.218.20.140:2775
-2025-06-27T09:38:33.056+03:00  INFO 78137 --- [PDUReaderWorker-07086f49] org.jsmpp.session.SMPPSession            : Starting PDUReaderWorker
-2025-06-27T09:38:33.102+03:00  INFO 78137 --- [main] o.a.camel.component.smpp.SmppConsumer    : Connected to: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T09:38:33.104+03:00  INFO 78137 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (total:2)
-2025-06-27T09:38:33.105+03:00  INFO 78137 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started smpp-dlr-route (smpp://test@jasmin.gemtoo.dev:2775)
-2025-06-27T09:38:33.105+03:00  INFO 78137 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started route1 (direct://sendSmppMessage)
-2025-06-27T09:38:33.105+03:00  INFO 78137 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) started in 257ms (build:0ms init:0ms start:257ms boot:843ms)
-2025-06-27T09:38:33.109+03:00  INFO 78137 --- [main] com.example.smppsender.Application       : Started Application in 3.357 seconds (process running for 8.731)
-2025-06-27T10:03:47.199+03:00  INFO 78137 --- [PDUReaderWorker-c37ce6e6] org.jsmpp.session.SMPPSession            : Reading PDU session c37ce6e6 in state BOUND_TX: Connection reset
-2025-06-27T10:03:47.199+03:00  INFO 78137 --- [PDUReaderWorker-07086f49] org.jsmpp.session.SMPPSession            : Reading PDU session 07086f49 in state BOUND_RX: Connection reset
-2025-06-27T10:03:47.200+03:00 ERROR 78137 --- [EnquireLinkSender-c37ce6e6] org.jsmpp.session.AbstractSession        : Response timeout on enquire_link
+2025-07-02T11:05:44.358+03:00  INFO 37574 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-02T11:05:44.482+03:00  INFO 37574 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-02T11:05:45.094+03:00  WARN 37574 --- [main] o.a.c.component.smpp.SmppConfiguration   : Unsupported encoding "UCS2" is being set.
+2025-07-02T11:05:45.122+03:00  WARN 37574 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-02T11:05:45.515+03:00  INFO 37574 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-02T11:05:45.667+03:00  WARN 37574 --- [main] o.a.c.component.smpp.SmppConfiguration   : Unsupported encoding "UCS2" is being set.
+2025-07-02T11:05:45.729+03:00  INFO 37574 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) is starting
+2025-07-02T11:05:45.735+03:00 DEBUG 37574 --- [main] o.a.camel.component.smpp.SmppProducer    : Connecting to: smpp://test@jasmin.gemtoo.dev:2775...
+2025-07-02T11:05:45.871+03:00  INFO 37574 --- [main] org.jsmpp.session.SMPPSession            : Connected from port 59339 to jasmin.gemtoo.dev/91.218.20.140:2775
+2025-07-02T11:05:45.874+03:00  INFO 37574 --- [PDUReaderWorker-873f4a26] org.jsmpp.session.SMPPSession            : Starting PDUReaderWorker
+2025-07-02T11:05:45.951+03:00  INFO 37574 --- [main] o.a.camel.component.smpp.SmppProducer    : Connected to: smpp://test@jasmin.gemtoo.dev:2775
+2025-07-02T11:05:45.952+03:00 DEBUG 37574 --- [main] o.a.camel.component.smpp.SmppConsumer    : Connecting to: smpp://test@jasmin.gemtoo.dev:2775...
+2025-07-02T11:05:46.008+03:00  INFO 37574 --- [main] org.jsmpp.session.SMPPSession            : Connected from port 59340 to jasmin.gemtoo.dev/91.218.20.140:2775
+2025-07-02T11:05:46.009+03:00  INFO 37574 --- [PDUReaderWorker-a1596da3] org.jsmpp.session.SMPPSession            : Starting PDUReaderWorker
+2025-07-02T11:05:46.066+03:00  INFO 37574 --- [main] o.a.camel.component.smpp.SmppConsumer    : Connected to: smpp://test@jasmin.gemtoo.dev:2775
+2025-07-02T11:05:46.069+03:00  INFO 37574 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Routes startup (total:2)
+2025-07-02T11:05:46.069+03:00  INFO 37574 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started smpp-dlr-route (smpp://test@jasmin.gemtoo.dev:2775)
+2025-07-02T11:05:46.069+03:00  INFO 37574 --- [main] o.a.c.impl.engine.AbstractCamelContext   :     Started route1 (direct://sendSmppMessage)
+2025-07-02T11:05:46.070+03:00  INFO 37574 --- [main] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) started in 340ms (build:0ms init:0ms start:340ms boot:1s227ms)
+2025-07-02T11:05:46.073+03:00  INFO 37574 --- [main] com.example.smppsender.Application       : Started Application in 4.742 seconds (process running for 10.311)
+2025-07-02T11:06:11.594+03:00  INFO 37574 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-02T11:06:11.594+03:00  INFO 37574 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-02T11:06:11.595+03:00  INFO 37574 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-02T11:06:11.630+03:00  INFO 37574 --- [pool-2-thread-1] c.e.s.service.MessageSenderService       : Запуск отправки сообщения №0 на номер 375298955557: 'Hello ты мой друг #0'
+2025-07-02T11:06:11.718+03:00  INFO 37574 --- [pool-2-thread-1] c.e.smppsender.route.SmppSendRoute       : Подготовлено сообщение к отправке: id=101, to=375298955557, sender=BK.bel, content='Hello ты мой друг #0'
+2025-07-02T11:06:11.762+03:00 ERROR 37574 --- [pool-2-thread-1] c.e.smppsender.route.SmppSendRoute       : Ошибка при отправке SMPP сообщения: UCS2
 
-org.jsmpp.extra.ResponseTimeoutException: No response after waiting for 60000 millis when executing enquire_link with session c37ce6e6 and sequence_number 6
-	at org.jsmpp.session.AbstractSession.executeSendCommand(AbstractSession.java:357) ~[jsmpp-3.0.1.jar:3.0.1]
-	at org.jsmpp.session.AbstractSession.sendEnquireLink(AbstractSession.java:403) ~[jsmpp-3.0.1.jar:3.0.1]
-	at org.jsmpp.session.AbstractSession$EnquireLinkSender.run(AbstractSession.java:542) ~[jsmpp-3.0.1.jar:3.0.1]
-Caused by: org.jsmpp.extra.ResponseTimeoutException: No response after 60000 millis
-	at org.jsmpp.extra.PendingResponse.waitDone(PendingResponse.java:118) ~[jsmpp-3.0.1.jar:3.0.1]
-	at org.jsmpp.session.AbstractSession.executeSendCommand(AbstractSession.java:345) ~[jsmpp-3.0.1.jar:3.0.1]
-	... 2 common frames omitted
+java.nio.charset.UnsupportedCharsetException: UCS2
+	at java.base/java.nio.charset.Charset.forName(Charset.java:527) ~[na:na]
+	at org.apache.camel.component.smpp.SmppSmCommand.<init>(SmppSmCommand.java:42) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppSubmitSmCommand.<init>(SmppSubmitSmCommand.java:44) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppCommandType$1.createCommand(SmppCommandType.java:28) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppCommandType$1.createCommand(SmppCommandType.java:25) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppBinding.createSmppCommand(SmppBinding.java:67) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppProducer.process(SmppProducer.java:183) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:65) ~[camel-support-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.SendProcessor.sendUsingProducer(SendProcessor.java:252) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:157) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$RedeliveryTask.doRun(RedeliveryErrorHandler.java:777) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$RedeliveryTask.run(RedeliveryErrorHandler.java:720) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.doRun(DefaultReactiveExecutor.java:199) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.executeReactiveWork(DefaultReactiveExecutor.java:189) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.tryExecuteReactiveWork(DefaultReactiveExecutor.java:166) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:148) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor.scheduleMain(DefaultReactiveExecutor.java:59) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:163) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.CamelInternalProcessor.processNonTransacted(CamelInternalProcessor.java:347) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.CamelInternalProcessor.process(CamelInternalProcessor.java:323) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:102) ~[camel-direct-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.processNonTransacted(SharedCamelInternalProcessor.java:156) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:133) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:89) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:82) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:86) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:178) ~[camel-support-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:175) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:171) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:136) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at com.example.smppsender.service.MessageSenderService.lambda$sendBulkMessages$1(MessageSenderService.java:55) ~[classes/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
 
-2025-06-27T10:03:47.200+03:00 ERROR 78137 --- [EnquireLinkSender-07086f49] org.jsmpp.session.AbstractSession        : Response timeout on enquire_link
+2025-07-02T11:06:33.979+03:00  WARN 37574 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'count': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "82Content-Type:application/x-www-form-urlencoded"]
+2025-07-02T11:07:33.627+03:00  WARN 37574 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'count': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "47Content-Type:application/x-www-form-urlencoded"]
+2025-07-02T11:09:14.745+03:00  INFO 37574 --- [pool-2-thread-2] c.e.s.service.MessageSenderService       : Запуск отправки сообщения №0 на номер 375298955557: 'Hello ты мой друг #0'
+2025-07-02T11:09:14.748+03:00  INFO 37574 --- [pool-2-thread-2] c.e.smppsender.route.SmppSendRoute       : Подготовлено сообщение к отправке: id=102, to=375298955557, sender=BK.bel, content='Hello ты мой друг #0'
+2025-07-02T11:09:14.752+03:00 ERROR 37574 --- [pool-2-thread-2] c.e.smppsender.route.SmppSendRoute       : Ошибка при отправке SMPP сообщения: UCS2
 
-org.jsmpp.extra.ResponseTimeoutException: No response after waiting for 60000 millis when executing enquire_link with session 07086f49 and sequence_number 6
-	at org.jsmpp.session.AbstractSession.executeSendCommand(AbstractSession.java:357) ~[jsmpp-3.0.1.jar:3.0.1]
-	at org.jsmpp.session.AbstractSession.sendEnquireLink(AbstractSession.java:403) ~[jsmpp-3.0.1.jar:3.0.1]
-	at org.jsmpp.session.AbstractSession$EnquireLinkSender.run(AbstractSession.java:542) ~[jsmpp-3.0.1.jar:3.0.1]
-Caused by: org.jsmpp.extra.ResponseTimeoutException: No response after 60000 millis
-	at org.jsmpp.extra.PendingResponse.waitDone(PendingResponse.java:118) ~[jsmpp-3.0.1.jar:3.0.1]
-	at org.jsmpp.session.AbstractSession.executeSendCommand(AbstractSession.java:345) ~[jsmpp-3.0.1.jar:3.0.1]
-	... 2 common frames omitted
+java.nio.charset.UnsupportedCharsetException: UCS2
+	at java.base/java.nio.charset.Charset.forName(Charset.java:527) ~[na:na]
+	at org.apache.camel.component.smpp.SmppSmCommand.<init>(SmppSmCommand.java:42) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppSubmitSmCommand.<init>(SmppSubmitSmCommand.java:44) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppCommandType$1.createCommand(SmppCommandType.java:28) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppCommandType$1.createCommand(SmppCommandType.java:25) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppBinding.createSmppCommand(SmppBinding.java:67) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppProducer.process(SmppProducer.java:183) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:65) ~[camel-support-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.SendProcessor.sendUsingProducer(SendProcessor.java:252) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:157) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$RedeliveryTask.doRun(RedeliveryErrorHandler.java:777) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$RedeliveryTask.run(RedeliveryErrorHandler.java:720) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.doRun(DefaultReactiveExecutor.java:199) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.executeReactiveWork(DefaultReactiveExecutor.java:189) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.tryExecuteReactiveWork(DefaultReactiveExecutor.java:166) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:148) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor.scheduleMain(DefaultReactiveExecutor.java:59) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:163) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.CamelInternalProcessor.processNonTransacted(CamelInternalProcessor.java:347) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.CamelInternalProcessor.process(CamelInternalProcessor.java:323) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:102) ~[camel-direct-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.processNonTransacted(SharedCamelInternalProcessor.java:156) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:133) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:89) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:82) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:86) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:178) ~[camel-support-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:175) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:171) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:136) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at com.example.smppsender.service.MessageSenderService.lambda$sendBulkMessages$1(MessageSenderService.java:55) ~[classes/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
 
-2025-06-27T10:03:47.204+03:00  WARN 78137 --- [PDUReaderWorker-c37ce6e6] o.a.camel.component.smpp.SmppProducer    : Lost connection to: smpp://test@jasmin.gemtoo.dev:2775 - trying to reconnect...
-2025-06-27T10:03:47.204+03:00  WARN 78137 --- [PDUReaderWorker-07086f49] o.a.camel.component.smpp.SmppConsumer    : Lost connection to: smpp://test@jasmin.gemtoo.dev:2775 - trying to reconnect...
-2025-06-27T10:03:52.208+03:00  INFO 78137 --- [Camel (camel-1) thread #2 - smpp-consumer-reconnect] o.a.camel.component.smpp.SmppConsumer    : Trying to reconnect to smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T10:03:52.208+03:00  INFO 78137 --- [Camel (camel-1) thread #1 - smpp-producer-reconnect] o.a.camel.component.smpp.SmppProducer    : Trying to reconnect to smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T10:03:52.209+03:00  INFO 78137 --- [Camel (camel-1) thread #2 - smpp-consumer-reconnect] o.a.camel.component.smpp.SmppConsumer    : Creating a new session to smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T10:03:52.209+03:00 DEBUG 78137 --- [Camel (camel-1) thread #1 - smpp-producer-reconnect] o.a.camel.component.smpp.SmppProducer    : Connecting to: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T10:03:52.254+03:00  INFO 78137 --- [Camel (camel-1) thread #2 - smpp-consumer-reconnect] org.jsmpp.session.SMPPSession            : Connected from port 52257 to jasmin.gemtoo.dev/91.218.20.140:2775
-2025-06-27T10:03:52.255+03:00  INFO 78137 --- [PDUReaderWorker-1f7bba53] org.jsmpp.session.SMPPSession            : Starting PDUReaderWorker
-2025-06-27T10:03:52.299+03:00  INFO 78137 --- [Camel (camel-1) thread #2 - smpp-consumer-reconnect] o.a.camel.component.smpp.SmppConsumer    : Reconnected to smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T10:03:52.338+03:00  INFO 78137 --- [Camel (camel-1) thread #1 - smpp-producer-reconnect] org.jsmpp.session.SMPPSession            : Connected from port 52258 to jasmin.gemtoo.dev/91.218.20.140:2775
-2025-06-27T10:03:52.339+03:00  INFO 78137 --- [PDUReaderWorker-17924cbf] org.jsmpp.session.SMPPSession            : Starting PDUReaderWorker
-2025-06-27T10:03:52.395+03:00  INFO 78137 --- [Camel (camel-1) thread #1 - smpp-producer-reconnect] o.a.camel.component.smpp.SmppProducer    : Connected to: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T10:04:00.063+03:00  WARN 78137 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m28s643ms).
-2025-06-27T10:11:57.130+03:00  INFO 78137 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-27T10:11:57.135+03:00  INFO 78137 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-27T10:11:57.139+03:00  INFO 78137 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) is shutting down (timeout:45s)
-2025-06-27T10:11:57.141+03:00 DEBUG 78137 --- [Camel (camel-1) thread #3 - ShutdownTask] o.a.camel.component.smpp.SmppConsumer    : Disconnecting from: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T10:11:57.190+03:00  INFO 78137 --- [PDUReaderWorker-1f7bba53] org.jsmpp.session.SMPPSession            : Reading PDU session 1f7bba53 in state BOUND_RX: Socket closed
-2025-06-27T10:11:57.190+03:00  INFO 78137 --- [Camel (camel-1) thread #3 - ShutdownTask] o.a.camel.component.smpp.SmppConsumer    : Disconnected from: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T10:11:57.191+03:00 DEBUG 78137 --- [Camel (camel-1) thread #3 - ShutdownTask] o.a.camel.component.smpp.SmppProducer    : Disconnecting from: smpp://test@jasmin.gemtoo.dev:2775...
-2025-06-27T10:11:57.248+03:00  INFO 78137 --- [Camel (camel-1) thread #3 - ShutdownTask] o.a.camel.component.smpp.SmppProducer    : Disconnected from: smpp://test@jasmin.gemtoo.dev:2775
-2025-06-27T10:11:57.248+03:00  INFO 78137 --- [PDUReaderWorker-17924cbf] org.jsmpp.session.SMPPSession            : Reading PDU session 17924cbf in state BOUND_TX: Socket closed
-2025-06-27T10:11:57.251+03:00  INFO 78137 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (total:2)
-2025-06-27T10:11:57.251+03:00  INFO 78137 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped route1 (direct://sendSmppMessage)
-2025-06-27T10:11:57.251+03:00  INFO 78137 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped smpp-dlr-route (smpp://test@jasmin.gemtoo.dev:2775)
-2025-06-27T10:11:57.255+03:00  INFO 78137 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) shutdown in 115ms (uptime:9m25s)
-2025-06-27T10:11:57.260+03:00  INFO 78137 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-27T10:11:57.261+03:00  INFO 78137 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-27T10:11:57.263+03:00  INFO 78137 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-02T11:10:09.469+03:00  INFO 37574 --- [pool-2-thread-3] c.e.s.service.MessageSenderService       : Запуск отправки сообщения №0 на номер 375298955557: 'Hello ты мой друг #0'
+2025-07-02T11:10:09.472+03:00  INFO 37574 --- [pool-2-thread-3] c.e.smppsender.route.SmppSendRoute       : Подготовлено сообщение к отправке: id=103, to=375298955557, sender=BK.bel, content='Hello ты мой друг #0'
+2025-07-02T11:10:09.476+03:00 ERROR 37574 --- [pool-2-thread-3] c.e.smppsender.route.SmppSendRoute       : Ошибка при отправке SMPP сообщения: UCS2
+
+java.nio.charset.UnsupportedCharsetException: UCS2
+	at java.base/java.nio.charset.Charset.forName(Charset.java:527) ~[na:na]
+	at org.apache.camel.component.smpp.SmppSmCommand.<init>(SmppSmCommand.java:42) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppSubmitSmCommand.<init>(SmppSubmitSmCommand.java:44) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppCommandType$1.createCommand(SmppCommandType.java:28) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppCommandType$1.createCommand(SmppCommandType.java:25) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppBinding.createSmppCommand(SmppBinding.java:67) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.smpp.SmppProducer.process(SmppProducer.java:183) ~[camel-smpp-4.12.0.jar:4.12.0]
+	at org.apache.camel.support.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:65) ~[camel-support-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.SendProcessor.sendUsingProducer(SendProcessor.java:252) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:157) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$RedeliveryTask.doRun(RedeliveryErrorHandler.java:777) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$RedeliveryTask.run(RedeliveryErrorHandler.java:720) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.doRun(DefaultReactiveExecutor.java:199) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.executeReactiveWork(DefaultReactiveExecutor.java:189) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.tryExecuteReactiveWork(DefaultReactiveExecutor.java:166) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:148) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultReactiveExecutor.scheduleMain(DefaultReactiveExecutor.java:59) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:163) ~[camel-core-processor-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.CamelInternalProcessor.processNonTransacted(CamelInternalProcessor.java:347) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.CamelInternalProcessor.process(CamelInternalProcessor.java:323) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:102) ~[camel-direct-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.processNonTransacted(SharedCamelInternalProcessor.java:156) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:133) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor$1.process(SharedCamelInternalProcessor.java:89) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultAsyncProcessorAwaitManager.process(DefaultAsyncProcessorAwaitManager.java:82) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.SharedCamelInternalProcessor.process(SharedCamelInternalProcessor.java:86) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.support.cache.DefaultProducerCache.send(DefaultProducerCache.java:178) ~[camel-support-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:175) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:171) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at org.apache.camel.impl.engine.DefaultProducerTemplate.send(DefaultProducerTemplate.java:136) ~[camel-base-engine-4.12.0.jar:4.12.0]
+	at com.example.smppsender.service.MessageSenderService.lambda$sendBulkMessages$1(MessageSenderService.java:55) ~[classes/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-07-02T11:10:40.462+03:00  INFO 37574 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-02T11:10:40.464+03:00  INFO 37574 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-02T11:10:40.467+03:00  INFO 37574 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) is shutting down (timeout:45s)
+2025-07-02T11:10:40.469+03:00 DEBUG 37574 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppConsumer    : Disconnecting from: smpp://test@jasmin.gemtoo.dev:2775...
+2025-07-02T11:10:40.535+03:00  INFO 37574 --- [PDUReaderWorker-a1596da3] org.jsmpp.session.SMPPSession            : Reading PDU session a1596da3 in state BOUND_RX: Socket closed
+2025-07-02T11:10:40.535+03:00  INFO 37574 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppConsumer    : Disconnected from: smpp://test@jasmin.gemtoo.dev:2775
+2025-07-02T11:10:40.536+03:00 DEBUG 37574 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppProducer    : Disconnecting from: smpp://test@jasmin.gemtoo.dev:2775...
+2025-07-02T11:10:40.595+03:00  INFO 37574 --- [PDUReaderWorker-873f4a26] org.jsmpp.session.SMPPSession            : Reading PDU session 873f4a26 in state BOUND_TX: Socket closed
+2025-07-02T11:10:40.596+03:00  INFO 37574 --- [Camel (camel-1) thread #1 - ShutdownTask] o.a.camel.component.smpp.SmppProducer    : Disconnected from: smpp://test@jasmin.gemtoo.dev:2775
+2025-07-02T11:10:40.598+03:00  INFO 37574 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Routes stopped (total:2)
+2025-07-02T11:10:40.598+03:00  INFO 37574 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped route1 (direct://sendSmppMessage)
+2025-07-02T11:10:40.598+03:00  INFO 37574 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   :     Stopped smpp-dlr-route (smpp://test@jasmin.gemtoo.dev:2775)
+2025-07-02T11:10:40.602+03:00  INFO 37574 --- [SpringApplicationShutdownHook] o.a.c.impl.engine.AbstractCamelContext   : Apache Camel 4.12.0 (camel-1) shutdown in 135ms (uptime:4m54s)
+2025-07-02T11:10:40.606+03:00  INFO 37574 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-02T11:10:40.609+03:00  INFO 37574 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-02T11:10:40.611+03:00  INFO 37574 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

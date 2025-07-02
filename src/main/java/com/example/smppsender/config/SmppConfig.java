@@ -19,6 +19,11 @@ public class SmppConfig {
     @Value("${camel.component.smpp.systemId}")
     private String systemId;
 
+    @Setter
+    @Getter
+    @Value("${smpp.sender}")
+    private String senderId;
+
     @Value("${camel.component.smpp.password}")
     private String password;
 
@@ -36,6 +41,7 @@ public class SmppConfig {
     @Value("${camel.component.smpp.encoding:UCS2}") // По умолчанию UCS2
     private String encoding;
 
+
     @Bean
     public SmppConfiguration smppConfiguration() {
         SmppConfiguration config = new SmppConfiguration();
@@ -46,8 +52,7 @@ public class SmppConfig {
         config.setSystemType(systemType);
         config.setEnquireLinkTimer((int) enquireLinkTimer);
         config.setTransactionTimer((int) transactionTimer);
-        config.setEncoding("UCS2"); // обязательно UCS2 для поддержки кириллицы
+        config.setEncoding(encoding);
         return config;
     }
-
 }
